@@ -29,7 +29,7 @@
 
 ## کنترل نسخه با Git
 
-### 1. ساخت Repository
+### ساخت Repository
 
 ابتدا یک repository جدید در GitHub ساخته شد با نام:
 
