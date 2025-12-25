@@ -1,8 +1,8 @@
 "# Todo Backend Project" 
-Hannaneh Bargi
-1400153624151
-تمرین اول مهندسی نرمافزار 1
-استاد تقی نژاد
+### Hannaneh Bargi
+### 1400153624151
+### تمرین اول مهندسی نرمافزار 1
+### استاد تقی نژاد
 
 * کنترل نسخه با Git (Branch و Pull Request)
 * پیاده‌سازی API به‌صورت اصولی (CRUD)
@@ -29,7 +29,7 @@ Hannaneh Bargi
 
 ## کنترل نسخه با Git
 
-### 1 ساخت Repository
+### 1. ساخت Repository
 
 ابتدا یک repository جدید در GitHub ساخته شد با نام:
 
@@ -43,7 +43,7 @@ git clone https://github.com/HannanehB/todo-backend.git
 
 ---
 
-### 2 Branching Strategy
+### 2. Branching Strategy
 
 برای رعایت اصول کنترل نسخه:
 
@@ -80,7 +80,7 @@ todo-backend/
 
 ## پیاده‌سازی بک‌اند (main.py)
 
-### 1 ایجاد FastAPI
+### 1. ایجاد FastAPI
 
 ```python
 from fastapi import FastAPI
@@ -91,7 +91,7 @@ app = FastAPI()
 
 ---
 
-### 2 ذخیره‌سازی In-Memory
+### 2. ذخیره‌سازی In-Memory
 
  از دیتابیس استفاده نشده و داده‌ها در حافظه ذخیره می‌شوند:
 
@@ -104,7 +104,7 @@ task_id_counter = 1
 
 ---
 
-### 3 مدل داده (Task)
+### 3. مدل داده (Task)
 
 ```python
 from pydantic import BaseModel
@@ -120,7 +120,7 @@ class Task(BaseModel):
 
 ## عملیات CRUD
 
-### 1 Create
+### 1. Create
 
 ```python
 @app.post("/tasks")
@@ -130,7 +130,7 @@ def create_task(task: Task):
 
 ---
 
-### 2 Read 
+### 2. Read 
 
 ```python
 @app.get("/tasks")
@@ -140,7 +140,7 @@ def get_tasks():
 
 ---
 
-### 3 Update 
+### 3. Update 
 
 ```python
 @app.put("/tasks/{task_id}")
@@ -150,7 +150,7 @@ def update_task(task_id: int, task: Task):
 
 ---
 
-### 4 Delete 
+### 4. Delete 
 
 ```python
 @app.delete("/tasks/{task_id}")
@@ -179,7 +179,7 @@ http://localhost:8000/docs
 
 ## Docker و استقرار پروژه
 
-### 1 Dockerfile
+### 1. Dockerfile
 
 Dockerfile مشخص می‌کند پروژه چگونه اجرا شود:
 
@@ -189,7 +189,7 @@ Dockerfile مشخص می‌کند پروژه چگونه اجرا شود:
 
 ---
 
-### 2 Docker Compose
+### 2. Docker Compose
 
 با Docker Compose پروژه تنها با یک دستور اجرا می‌شود:
 
